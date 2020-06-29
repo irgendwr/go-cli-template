@@ -79,7 +79,7 @@ func init() {
 
 	// Define flags
 	rootCmd.PersistentFlags().StringVarP(&cfgFile, "config", "c", "", "config file (default is "+defaultCfgFile+"."+defaultCfgFileType+" in program dir, CWD or $HOME)")
-	rootCmd.PersistentFlags().StringVarP(&cfgFile, "username", "u", "", "username (default is "+defaultUser+")")
+	rootCmd.PersistentFlags().StringP("username", "u", "", "username (default is "+defaultUser+")")
 	rootCmd.Flags().BoolVarP(&printVersion, "version", "v", false, "show version and exit")
 
 	// Set default config values
