@@ -1,8 +1,9 @@
 # go-cli-template
 
 <!-- FIXME: replace 'irgendwr/go-cli-template' with your repository name -->
-![Build status](https://github.com/irgendwr/go-cli-template/workflows/build/badge.svg)
-![Release status](https://github.com/irgendwr/go-cli-template/workflows/release/badge.svg)
+[![Build status](https://github.com/irgendwr/go-cli-template/workflows/build/badge.svg)](https://github.com/irgendwr/go-cli-template/actions?query=workflow%3Abuild)
+[![Release status](https://github.com/irgendwr/go-cli-template/workflows/release/badge.svg)](https://github.com/irgendwr/go-cli-template/actions?query=workflow%3Arelease)
+[![Go Report Card](https://goreportcard.com/badge/github.com/irgendwr/go-cli-template)](https://goreportcard.com/report/github.com/irgendwr/go-cli-template)
 [![GitHub Release](https://img.shields.io/github/release/irgendwr/go-cli-template.svg)](https://github.com/irgendwr/go-cli-template/releases)
 
 <!-- FIXME: add short description here -->
