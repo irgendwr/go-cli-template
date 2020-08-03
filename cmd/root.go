@@ -17,7 +17,7 @@ const longDescription = "FIXME: long description"
 
 const defaultUser = "foobar"
 
-// defaultCfgFile is the default config file name without extention
+// defaultCfgFile is the default config file name without extension
 const defaultCfgFile = "." + appname
 const defaultCfgFileType = "yaml"
 const envPrefix = appname // FIXME: if appname contains dashes (`-`), replace with underscores (`_`)
@@ -28,7 +28,7 @@ var cfgFile string
 // printVersion is true when version flag is set
 var printVersion bool
 
-// rootCmd represents the base command when called without any subcommands
+// rootCmd represents the base command when called without any sub-commands
 var rootCmd = &cobra.Command{
 	Use:   appname,
 	Short: description,
@@ -46,7 +46,7 @@ var rootCmd = &cobra.Command{
 			log.Fatalf("Error: Unable to read config: %s\n", err)
 		}
 
-		// FIXME: check config / params
+		// FIXME: check config / arguments
 		/* if cfg.Username == "" || cfg.Password == "" {
 			log.Fatalln("Please set your username and password in the config file (" + defaultCfgFile + "." + defaultCfgFileType + ").")
 		} */
@@ -82,7 +82,7 @@ func init() {
 // initConfig reads in config file and environment variables if set.
 func initConfig() {
 	if printVersion {
-		// skip reading config when printVersionis set
+		// skip reading config when printing version
 		return
 	}
 
