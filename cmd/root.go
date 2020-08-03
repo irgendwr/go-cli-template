@@ -22,14 +22,6 @@ const defaultCfgFile = "." + appname
 const defaultCfgFileType = "yaml"
 const envPrefix = appname // FIXME: if appname contains dashes (`-`), replace with underscores (`_`)
 
-// nolint: gochecknoglobals
-var (
-	version = "dev"
-	commit  = ""
-	date    = ""
-	builtBy = ""
-)
-
 // cfgFile contains the config file path if set by a CLI flag
 var cfgFile string
 
@@ -43,8 +35,7 @@ var rootCmd = &cobra.Command{
 	Long:  longDescription,
 	Run: func(cmd *cobra.Command, args []string) {
 		if printVersion {
-			fmt.Println(description)
-			fmt.Println(buildVersion(version, commit, date))
+			versionCmd.Run(cmd, args)
 			return
 		}
 
@@ -88,7 +79,7 @@ func init() {
 	viper.BindPFlag("username", rootCmd.PersistentFlags().Lookup("username"))
 }
 
-// initConfig reads in config file and ENV variables if set.
+// initConfig reads in config file and environment variables if set.
 func initConfig() {
 	if printVersion {
 		// skip reading config when printVersionis set
@@ -130,18 +121,4 @@ func initConfig() {
 	if err := viper.ReadInConfig(); err == nil {
 		fmt.Println("Using config file:", viper.ConfigFileUsed())
 	}
-}
-
-func buildVersion(version, commit, date string) string {
-	var result = fmt.Sprintf("version: %s", version)
-	if commit != "" {
-		result = fmt.Sprintf("%s\ncommit: %s", result, commit)
-	}
-	if date != "" {
-		result = fmt.Sprintf("%s\nbuilt at: %s", result, date)
-	}
-	if builtBy != "" {
-		result = fmt.Sprintf("%s\nbuilt by: %s", result, builtBy)
-	}
-	return result
 }
