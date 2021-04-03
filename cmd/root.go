@@ -19,7 +19,7 @@ const defaultUser = "foobar"
 
 // defaultCfgFile is the default config file name without extension
 const defaultCfgFile = "." + appname
-const defaultCfgFileType = "yaml"
+const defaultCfgFileType = "yml"
 const envPrefix = appname // FIXME: if appname contains dashes (`-`), replace with underscores (`_`)
 
 // cfgFile contains the config file path if set by a CLI flag

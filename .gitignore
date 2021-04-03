@@ -24,3 +24,4 @@ dist/
 # FIXME: replace 'APPNAME' with your application name
 APPNAME
 .APPNAME.yaml
+.APPNAME.yml

@@ -37,7 +37,7 @@ tar -xvzf APPNAME_Linux_x86_64.tar.gz
 ```
 
 <!-- FIXME: replace 'APPNAME' with your application name -->
-Create a file called `.APPNAME.yaml` inside this folder (e.g. using `nano .APPNAME.yaml`) and edit it to fit your needs.
+Create a file called `.APPNAME.yml` inside this folder (e.g. using `nano .APPNAME.yml`) and edit it to fit your needs.
 See [config](#config) section for examples.
 
 ### Config
